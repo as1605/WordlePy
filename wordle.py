@@ -20,6 +20,8 @@ def query(wordlist = [], contains = [], not_contains = [], positions = {}, not_p
 		for t in not_positions:
 			if w[t] == not_positions[t]:
 				check = False
+			elif not_positions[t] not in w:
+				check = False
 		if check:
 			arr.append(w)
 	return arr
